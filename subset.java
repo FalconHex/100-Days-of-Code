@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class subset {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -14,25 +13,18 @@ public class subset {
 
         dispSub(arr);
     }
-
     public static void dispSub(int[] arr){
-
         // getting the length of array 
         // to know how many place to assign in each subset
         int len = arr.length;
-
         // tot. no. of subset = 2^n
-        int tot = (int)Math.pow(2,len);
-
+        int tot = (int)Math.pow(2,len);        
         // running a loop to check for each subset
         for(int k=0; k<tot; k++) {
-
             // stores wether a elem will participate in being in subset or not
             int[]bin = decToBin(k,len);
-
-            // running through bin array
-            for(int i=0; i<len; i++){
-                
+            // running through bin array            
+            for(int i=0; i<len; i++){                
                 // if it has 0 thus elem of arr in that index won't participate in subset
                 if(bin[i] == 0){
                     System.out.print("-\t");
@@ -43,9 +35,7 @@ public class subset {
             }
             System.out.println();
         }
-    }
-
-    
+    }    
     public static int[] decToBin(int k, int len){
 
         // array to return
