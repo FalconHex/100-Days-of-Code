@@ -13,7 +13,6 @@ public class stairPathsDP {
         int res_tab = paths_tab(n);
         System.out.println("Number of paths found using tabulation: "+ res_tab);
     }
-
     public static int paths_mem(int n, int[] qb) {
         // +ve base case
         if(n==0){
