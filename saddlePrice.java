@@ -2,11 +2,11 @@ import java.util.*;
 public class saddlePrice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter dimension of array: ");
+        System.out.print("Enter dimension of array : ");
         int n = sc.nextInt();
 
         int[][]arr = new int[n][n];
-        System.out.println("Enter elements of array: ");
+        System.out.println("Enter elements of array : ");
 
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
@@ -14,7 +14,7 @@ public class saddlePrice {
                 arr[i][j] = sc.nextInt();
             }
         }
-
+ 
         System.out.println("Saddle point of given array:");
         
         findSaddle(arr);
