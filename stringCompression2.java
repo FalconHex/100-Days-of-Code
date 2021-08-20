@@ -11,16 +11,13 @@ public class stringCompression2 {
     
     
 	public static String compression(String str){
-		// write your code here
 		
 		StringBuilder ans = new StringBuilder("");
         // a counter that counts occurence of same char 		
 		int count = 1;
-		
 		for(int i=0; i<str.length()-1; i++){
 		    char curr = str.charAt(i);
 		    char next = str.charAt(i+1);
-		    
 		  //  if char is same cont ++
 		    if(curr == next){
 		        count++;
