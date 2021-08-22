@@ -26,8 +26,6 @@ public class stairJumosVarDP {
         System.out.println("Ways found using tabulation = " + csvj_tab(arr));
     }
     
-    
-    
     // climb stair with var jump memoization
     public static int csvj_mem(int src, int[]jumps,int[]qb){
         
