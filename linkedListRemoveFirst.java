@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class displayLinkedList {
+public class linkedListRemoveFirst {
     
     public static void main(String[] args) throws Exception {
         
@@ -11,6 +11,8 @@ public class displayLinkedList {
     
         System.out.println("Keep adding nodes to list by typing 'addLast x'");
         System.out.println("To print information about list type 'display'");
+        System.out.println("To remove first element type 'removeFirst'");
+
         System.out.println("----------------------------------------------------");
         String str = br.readLine();
         while (str.equals("quit") == false) {
@@ -23,6 +25,9 @@ public class displayLinkedList {
             } 
             else if (str.startsWith("display")) {
                 list.display();
+            }
+            else if(str.startsWith("removeFirst")){
+                list.removeFirst();
             }
             str = br.readLine();
         }
@@ -63,7 +68,21 @@ public class displayLinkedList {
             }
             System.out.println();
         }
+
+        public void removeFirst(){
+            if(size == 0){
+                System.out.println("List is empty");
+            }
+            else if(size == 1){
+                head = tail = null;
+                size = 0;
+            }
+            else{
+                head = head.next;
+                size--;
+            }
+        }
     }
 
-  
+
 }
