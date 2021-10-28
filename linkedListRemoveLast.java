@@ -18,6 +18,7 @@ public class linkedListRemoveLast {
         System.out.println("To add element at first type 'addFirst x");
         System.out.println("To add element at first type 'addAt idx x");
         System.out.println("To remove last element type 'removeLast");
+        System.out.println("To remove element at any index type 'removeAt idx");
         System.out.println("----------------------------------------------------");
         String str = br.readLine();
         while (str.equals("quit") == false) {
@@ -68,6 +69,10 @@ public class linkedListRemoveLast {
 
             else if(str.startsWith("removeLast")){
                 list.removeLast();
+            }
+            else if(str.startsWith("removeAt")){
+                int idx = Integer.parseInt(str.split(" ")[1]);
+                list.removeAt(idx);
             }
             str = br.readLine();
         }
@@ -215,6 +220,27 @@ public class linkedListRemoveLast {
                 }
                 tail = temp;
                 tail.next = null;
+                size--;
+            }
+        }
+
+        public void removeAt(int idx) {
+            if(idx < 0 || idx > size){
+                System.out.println("Invalid index");
+            }
+            else if(idx == 0){
+                removeFirst();;
+            }
+            else if(idx == size - 1){
+                removeLast();;
+            }
+            else{
+                Node temp = head;
+                for(int i = 0; i < idx-1; i++){
+                    temp = temp.next;
+                }
+
+                temp.next = temp.next.next;
                 size--;
             }
         }
