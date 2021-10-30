@@ -281,7 +281,7 @@ public class linkedListRevPointer {
 
         public void reversePI() {
             Node prev = null;
-            Node curr = head;
+            Node curr = head; 
 
             while(curr != null) {
                 Node next = curr.next;
@@ -290,7 +290,7 @@ public class linkedListRevPointer {
                 prev = curr;
                 curr = next;
             }
-
+            
             Node temp = head;
             head = tail;
             tail = temp;
