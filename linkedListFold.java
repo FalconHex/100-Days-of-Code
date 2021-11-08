@@ -62,7 +62,7 @@ public class linkedListFold {
         Node fleft; //left pointer that remains in heap 
         
         public void fold(){
-            fleft = head; //setting left pointer at head
+            fleft = head; //setting left pointer at head 
             //calling helper func with arg = right pointer at head & floor value=0
             foldHelper(head , 0); 
         }
